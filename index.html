@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <div class="mobile-nav md:hidden hidden">
+      <div class="mb">
+        <ul class="mb-links-cont">
+          <li class="mb-nav-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="mb-nav-item"><a href="#">New</a></li>
+          <li class="mb-nav-item"><a href="#">Popular</a></li>
+          <li class="mb-nav-item"><a href="#">Trending</a></li>
+          <li class="mb-nav-item"><a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </div>
+    <header class="bg-Off-white py-10">
+      <div class="cont w-[100%] max-w-[90rem] mx-auto max-md:px-5">
+        <nav class="flex justify-between items-center">
+          <a href="#">
+            <img src="/assets/images/logo.svg" alt="logo" />
+          </a>
+          <ul class="flex [&>li]:ml-9 max-md:hidden">
+            <li class="nav-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-item"><a href="#">New</a></li>
+            <li class="nav-item"><a href="#">Popular</a></li>
+            <li class="nav-item"><a href="#">Trending</a></li>
+            <li class="nav-item"><a href="#">Categories</a></li>
+          </ul>
+
+          <button class="hamburger md:hidden z-50">
+            <img
+              src="/assets/images/icon-menu.svg"
+              alt="menu-icon"
+              id="ham-img"
+            />
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content bg-Off-white">
+      <div class="cont w-[100%] max-w-[90rem] mx-auto max-md:px-5">
+        <div
+          class="grid-cont-1 grid grid-cols-main items-center gap-8 max-lg:grid-cols-1"
+        >
+          <div class="item-1">
+            <div class="img block h-[50%]">
+              <picture>
+                <source
+                  media="(min-width:768px)"
+                  srcset="/assets/images/image-web-3-desktop.jpg"
+                />
+                <img
+                  src="/assets/images/image-web-3-mobile.jpg"
+                  alt="Flowers"
+                  style="width: auto"
+                />
+              </picture>
+            </div>
+            <div
+              class="sub-grids grid grid-cols-2 items-center gap-5 pt-4 max-lg:grid-cols-1"
+            >
+              <div class="sub-1">
+                <h1 class="font-extrabold text-7xl text-left max-md:text-4xl">
+                  The Bright Future of Web 3.0?
+                </h1>
+              </div>
+              <div class="sub-2">
+                <p
+                  class="text-Dark-grayish-blue text-left mb-12 block w-[90%] leading-8 text-xl max-md:text-base"
+                >
+                  We dive into the next ovolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfillinf its promise.
+                </p>
+
+                <button
+                  class="btn inline-block bg-Soft-red text-Off-white py-3 px-8 font-medium text-sm hover:bg-Very-dark-blue transition-all"
+                >
+                  READ MORE
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item-1 bg-Very-dark-blue p-10 max-md:p-6">
+            <h2 class="text-Soft-orange font-extrabold text-3xl">New</h2>
+
+            <ul class="ul-cont [&>li]:py-10 max-md:[&>li]:py-5">
+              <li class="">
+                <span class="sub-heading">Hydrogen VS Electric Cars</span>
+                <span class="sub-txt"
+                  >Will hydrogen-fueled cars ever catch up to EVs</span
+                >
+              </li>
+              <li class="">
+                <span class="sub-heading">The Downsides of AI Artistry</span>
+                <span class="sub-txt"
+                  >What are the possible adverse effects of on demand AI image
+                  generation?</span
+                >
+              </li>
+
+              <li class="">
+                <span class="sub-heading">Is VS Funding Drying Up?</span>
+                <span class="sub-txt"
+                  >Private funding by VC firms is down 50% YOY. We take a look
+                  at what that means.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-cont-2 grid grid-cols-item gap-8 items-center py-16">
+          <div class="items grid grid-cols-2 gap-3">
+            <div class="img">
+              <img src="/assets/images/image-retro-pcs.jpg" alt="retro" />
+            </div>
+            <div class="content text-left">
+              <span class="card-span">01</span>
+              <h3 class="heading-3">Receiving Retro PCs</h3>
+              <p class="cards-text">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="items grid grid-cols-2 gap-5">
+            <div class="img">
+              <img src="/assets/images/image-top-laptops.jpg" alt="laptops" />
+            </div>
+            <div class="content">
+              <span class="card-span">02</span>
+              <h3 class="heading-3">Top 10 Laptops of 2022</h3>
+              <p class="cards-text">
+                Our best picks for various needs and bugdets.
+              </p>
+            </div>
+          </div>
+          <div class="items grid grid-cols-2 gap-5">
+            <div class="img">
+              <img src="/assets/images/image-gaming-growth.jpg" alt="gaming" />
+            </div>
+            <div class="content">
+              <span class="card-span">03</span>
+              <h3 class="heading-3">The growth of gaming</h3>
+              <p class="cards-text">
+                How the pandemic has sparked fresh opportunities
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
+    into the next evolution of the web that claims to put the power of the
+    platforms back into the hands of the people. But is it really fulfilling its
+    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
+    ever catch up to EVs? The Downsides of AI Artistry What are the possible
+    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
+    Private funding by VC firms is down 50% YOY. We take a look at what that
+    means. 01 Reviving Retro PCs What happens when old PCs are given modern
+    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
+    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
+    opportunities. -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
