@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Custom grids
-        main: "2fr 1fr",
+        main: "1fr 1fr 1fr",
         item: "repeat(auto-fit, minmax(18rem, 1fr))",
       },
     },

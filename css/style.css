@@ -25,7 +25,7 @@
     line-height: 1.6;
     position: relative;
     /* min-height: 100vh; */
-    /* font-size: 1.6rem; */
+    font-size: 1rem;
   }
 
   img {
@@ -39,6 +39,29 @@
   }
 }
 @layer components {
+  /* Styling the overal grid container */
+  .grid-cont {
+    display: grid;
+    grid-gap: 2rem;
+  }
+  .main-blog {
+    display: grid;
+    grid-gap: 2rem;
+    align-items: start;
+  }
+  .btn {
+    justify-self: start;
+    align-self: flex-end;
+  }
+  .sub {
+    display: grid;
+    gap: 0.2rem;
+  }
+  .ul {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
   /* Navigation */
   .nav-item {
     @apply hover:text-Soft-red transition-all;
@@ -47,24 +70,36 @@
     letter-spacing: 3px;
   }
   .sub-heading {
-    @apply text-Off-white font-medium text-lg block mb-4  md:hover:cursor-pointer md:hover:text-Soft-orange transition-all;
+    @apply text-Off-white font-medium text-lg block   md:hover:cursor-pointer md:hover:text-Soft-orange transition-all;
   }
   .sub-txt {
     @apply text-Grayish-blue;
+  }
+  .ul-li-ct {
+    display: grid;
+    gap: 0.7rem;
+    padding: 1.9rem 0;
   }
   .ul-cont > *:not(:last-child) {
     border-bottom: 1px solid hsl(236, 13%, 42%);
   }
 
   .card-span {
-    @apply text-5xl text-Grayish-blue mb-5 max-md:mb-3;
+    @apply text-4xl text-Grayish-blue mb-3 max-md:mb-3 block;
   }
   .heading-3 {
-    @apply font-extrabold text-Very-dark-blue mb-5 max-md:mb-3 md:hover:text-Soft-red;
+    @apply font-extrabold text-Very-dark-blue mb-3 max-md:mb-2 md:hover:text-Soft-red;
   }
   .cards-text {
     @apply text-Dark-grayish-blue font-medium;
   }
+  .img-cards {
+    object-fit: cover;
+    height: 100%;
+    object-position: center;
+  }
+
+  /* Styling the mobile navigation */
   .mobile-nav {
     position: absolute;
     background-color: #00000057;
@@ -95,5 +130,55 @@
   }
   .mb-links-cont li {
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .grid-cont {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "main main sub "
+        "reco reco reco";
+      grid-gap: 2rem;
+    }
+    .main-blog {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      grid-template-areas:
+        "img img"
+        "title desc"
+        "title link";
+      align-items: start;
+    }
+    .img-main {
+      grid-area: img;
+    }
+    .main-heading {
+      grid-area: title;
+    }
+    .main-txt {
+      grid-area: desc;
+    }
+
+    .btn {
+      grid-area: link;
+      justify-self: start;
+      align-self: flex-end;
+    }
+    .reco-cont {
+      grid-area: reco;
+    }
+    .sub {
+      grid-area: sub;
+      display: grid;
+      gap: 0.2rem;
+    }
+    .ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+    }
   }
 }

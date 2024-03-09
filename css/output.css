@@ -466,7 +466,7 @@ body {
   line-height: 1.6;
   position: relative;
   /* min-height: 100vh; */
-  /* font-size: 1.6rem; */
+  font-size: 1rem;
 }
 
 img {
@@ -615,6 +615,39 @@ ul {
   }
 }
 
+/* Styling the overal grid container */
+
+.grid-cont {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.main-blog {
+  display: grid;
+  grid-gap: 2rem;
+  align-items: start;
+}
+
+.btn {
+  justify-self: start;
+  align-self: flex-end;
+}
+
+.\!sub {
+  display: grid !important;
+  gap: 0.2rem !important;
+}
+
+.sub {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.ul {
+  display: grid;
+  grid-gap: 2rem;
+}
+
 /* Navigation */
 
 .nav-item{
@@ -633,7 +666,6 @@ ul {
 }
 
 .sub-heading{
-  margin-bottom: 1rem;
   display: block;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -658,14 +690,21 @@ ul {
   color: hsl(233 8% 79% / var(--tw-text-opacity));
 }
 
+.ul-li-ct {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.9rem 0;
+}
+
 .ul-cont > *:not(:last-child) {
   border-bottom: 1px solid hsl(236, 13%, 42%);
 }
 
 .card-span{
-  margin-bottom: 1.25rem;
-  font-size: 3rem;
-  line-height: 1;
+  margin-bottom: 0.75rem;
+  display: block;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: hsl(233 8% 79% / var(--tw-text-opacity));
 }
@@ -677,7 +716,7 @@ ul {
 }
 
 .heading-3{
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   font-weight: 800;
   --tw-text-opacity: 1;
   color: hsl(240 100% 5% / var(--tw-text-opacity));
@@ -685,7 +724,7 @@ ul {
 
 @media not all and (min-width: 768px){
   .heading-3{
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -701,6 +740,16 @@ ul {
   --tw-text-opacity: 1;
   color: hsl(236 13% 42% / var(--tw-text-opacity));
 }
+
+.img-cards {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* Styling the mobile navigation */
 
 .mobile-nav {
   position: absolute;
@@ -733,6 +782,98 @@ ul {
 
 .mb-links-cont li {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "main main sub "
+        "reco reco reco";
+    grid-gap: 2rem;
+  }
+
+  .main-blog {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        "img img"
+        "title desc"
+        "title link";
+    align-items: start;
+  }
+
+  .img-main {
+    grid-area: img;
+  }
+
+  .main-heading {
+    grid-area: title;
+  }
+
+  .main-txt {
+    grid-area: desc;
+  }
+
+  .btn {
+    grid-area: link;
+    justify-self: start;
+    align-self: flex-end;
+  }
+
+  .reco-cont {
+    grid-area: reco;
+  }
+
+  .sub {
+    grid-area: sub;
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+   {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-areas:
+        "main main sub "
+        "reco reco reco" !important;
+    grid-area: main !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 2rem !important;
+    grid-template-areas:
+        "img img"
+        "title desc"
+        "title link" !important;
+    align-items: start !important;
+    grid-area: img !important;
+    grid-area: title !important;
+    grid-area: desc !important;
+    grid-area: link !important;
+    justify-self: start !important;
+    align-self: flex-end !important;
+    grid-area: reco !important;
+  }
+
+  .\!sub {
+    grid-area: sub !important;
+    display: grid !important;
+    gap: 0.2rem !important;
+  }
+
+   {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-gap: 2rem !important;
+  }
 }
 
 .sr-only{
@@ -871,10 +1012,6 @@ ul {
   margin-right: auto;
 }
 
-.mb-12{
-  margin-bottom: 3rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -978,10 +1115,6 @@ ul {
   display: none;
 }
 
-.h-\[50\%\]{
-  height: 50%;
-}
-
 .w-\[100\%\]{
   width: 100%;
 }
@@ -1002,8 +1135,8 @@ ul {
   width: weird-and-invalid;
 }
 
-.max-w-\[90rem\]{
-  max-width: 90rem;
+.max-w-\[70rem\]{
+  max-width: 70rem;
 }
 
 .flex-shrink{
@@ -1344,14 +1477,6 @@ ul {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-item{
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-}
-
-.grid-cols-main{
-  grid-template-columns: 2fr 1fr;
-}
-
 .flex-row{
   flex-direction: row;
 }
@@ -1542,10 +1667,6 @@ ul {
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-8{
-  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -2118,8 +2239,8 @@ ul {
      object-fit: scale-down;
 }
 
-.p-10{
-  padding: 2.5rem;
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-8{
@@ -2132,18 +2253,9 @@ ul {
   padding-bottom: 2.5rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.pt-4{
+.py-4{
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-left{
@@ -2207,19 +2319,19 @@ ul {
   line-height: 2.25rem;
 }
 
-.text-7xl{
-  font-size: 4.5rem;
+.text-6xl{
+  font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -2736,12 +2848,6 @@ ul {
   text-align: center;
 }
 
-@media not all and (min-width: 1024px){
-  .max-lg\:grid-cols-1{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
 @media not all and (min-width: 768px){
   .max-md\:hidden{
     display: none;
@@ -2749,6 +2855,11 @@ ul {
 
   .max-md\:p-6{
     padding: 1.5rem;
+  }
+
+  .max-md\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .max-md\:px-5{
@@ -2787,16 +2898,4 @@ ul {
 
 .\[\&\>li\]\:ml-9>li{
   margin-left: 2.25rem;
-}
-
-.\[\&\>li\]\:py-10>li{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-@media not all and (min-width: 768px){
-  .max-md\:\[\&\>li\]\:py-5>li{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
 }

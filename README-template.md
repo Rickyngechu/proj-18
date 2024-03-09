@@ -57,11 +57,6 @@ I learnt on Developing multisign form whereby users can be able to enter their d
 </picture>
 ```
 
-### Continued development
-
-I have not fully implemented the part where user will be able to see the selected items and hover,active states.
-This will be the future implementation.
-
 ### Useful resources
 
 - [Image toggling](https://www.basedash.com/blog/how-to-change-an-image-src-with-javascript) - This helped me for learning how to toggle images using relative links and looked like dom manipulation. I really liked this pattern and will use it going forward.
